@@ -107,7 +107,7 @@ function App() {
   return (
     <div className="App flex flex-col min-h-screen">
       {showNavigation && <Navigation />}
-      <main className="flex-grow p-4 bg-gray-100">
+      <main className="flex-grow p-0gi bg-gray-100">
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/product" element={<ProductPage />} />
