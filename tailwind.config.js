@@ -17,6 +17,7 @@ module.exports = {
       colors:{
         "custom-yellow":'#f9eb28',
         'custom-red': '#F24F4B',
+        'custom-heading':"#667649"
       },
     },
   },

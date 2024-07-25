@@ -720,9 +720,9 @@ const AddProduct = () => {
 
   return (
     // <div className="p-4 ml-72  sm:p-6  bg-white shadow-md rounded-md">
-    <div className="p-4 ml-10 lg:ml-72 sm:p-6 bg-white shadow-md rounded-md">
+    <div className="p-4 ml-10 lg:ml-72 sm:p-6 bg-white shadow rounded-md">
 
-      <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">Add New Product</h2>
+      <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-custom-heading">Add New Product</h2>
       <form onSubmit={handleAddProduct}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
           <div>
@@ -901,7 +901,7 @@ const AddProduct = () => {
           </div>
         </div>
         <div className="flex justify-end">
-          <button type="submit" className="px-6 py-3 bg-green-500 text-white rounded-md">
+          <button type="submit" className="px-6 py-3 bg-custom-red text-white rounded-md">
             Add Product
           </button>
         </div>

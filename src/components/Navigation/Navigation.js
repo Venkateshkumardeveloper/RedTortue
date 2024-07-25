@@ -865,7 +865,7 @@ export default function Navigation() {
                               className={classNames(
                                 location.pathname === item.href
                                   ? 'bg-indigo-700 text-white'
-                                  : 'text-indigo-200 hover:bg-indigo-700 hover:text-white',
+                                  : 'text-gray-900 hover:bg-indigo-700 hover:text-white',
                                 'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6'
                               )}
                             >
@@ -874,7 +874,7 @@ export default function Navigation() {
                                 className={classNames(
                                   location.pathname === item.href
                                     ? 'text-white'
-                                    : 'text-indigo-200 group-hover:text-white',
+                                    : 'text-indigo-200 group-hover:text-gray-200',
                                   'h-6 w-6 shrink-0'
                                 )}
                               />
@@ -887,11 +887,11 @@ export default function Navigation() {
                     <li className="mt-auto">
                       <a
                         href="#"
-                        className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-indigo-200 hover:bg-indigo-700 hover:text-white"
+                        className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading text-white hover:bg-indigo-700 hover:text-white"
                       >
                         <Cog6ToothIcon
                           aria-hidden="true"
-                          className="h-6 w-6 shrink-0 text-indigo-200 group-hover:text-white"
+                          className="h-6 w-6 shrink-0 text-white group-hover:text-white"
                         />
                         Settings
                       </a>
@@ -904,7 +904,7 @@ export default function Navigation() {
         </Dialog>
 
         <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
-          <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-indigo-600 px-6 pb-4">
+          <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-4">
             <div className="flex h-16 shrink-0 items-center">
               <img
                 alt="Your Company"
@@ -923,8 +923,8 @@ export default function Navigation() {
                           onClick={() => setSidebarOpen(false)} // Close sidebar on click
                           className={classNames(
                             location.pathname === item.href
-                              ? 'bg-indigo-700 text-white'
-                              : 'text-indigo-200 hover:bg-indigo-700 hover:text-white',
+                              ? 'bg-custom-red  text-white'
+                              : ' text-white-900 hover:bg-custom-red hover:text-white',
                             'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6'
                           )}
                         >
@@ -932,7 +932,7 @@ export default function Navigation() {
                             aria-hidden="true"
                             className={classNames(
                               location.pathname === item.href
-                                ? 'text-white'
+                                ? ' text-white'
                                 : 'text-indigo-200 group-hover:text-white',
                               'h-6 w-6 shrink-0'
                             )}
@@ -945,13 +945,13 @@ export default function Navigation() {
                 </li>
                 <li className="mt-auto">
                   <a
-                    href="#"
-                    className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-indigo-200 hover:bg-indigo-700 hover:text-white"
+                    href="dashboard"
+                    className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-900 hover:bg-custom-red hover:text-white"
                     onClick={() => handleSignOut()} // Handle sign out
                   >
                     <Cog6ToothIcon
                       aria-hidden="true"
-                      className="h-6 w-6 shrink-0 text-indigo-200 group-hover:text-white"
+                      className="h-6 w-6 shrink-0  text-gray-700 group-hover:text-white"
                     />
                     Settings
                   </a>
@@ -1031,7 +1031,7 @@ export default function Navigation() {
             </div>
           </div>
 
-          <main className="py-10">
+          <main className="py-0">
             <div className="px-4 sm:px-6 lg:px-8">{/* Your content */}</div>
           </main>
         </div>
