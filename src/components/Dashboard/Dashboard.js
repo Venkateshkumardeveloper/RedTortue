@@ -116,7 +116,7 @@ import React, { useEffect, useRef } from 'react';
 import { Chart, registerables } from 'chart.js';
 import { Line, Bar } from 'react-chartjs-2';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChartLine, faUsers, faDollarSign, faTasks } from '@fortawesome/free-solid-svg-icons';
+import { faChartLine, faUsers, faIndianRupeeSign, faTasks } from '@fortawesome/free-solid-svg-icons';
 import 'chart.js/auto';
 
 // Register the required components globally
@@ -194,7 +194,7 @@ const Dashboard = () => {
                             <h3 className="text-lg font-semibold">Revenue Generated</h3>
                             <p className="text-2xl">36056</p>
                         </div>
-                        <FontAwesomeIcon icon={faDollarSign} className="text-4xl absolute bottom-4 right-4" />
+                        <FontAwesomeIcon icon={faIndianRupeeSign} className="text-4xl absolute bottom-4 right-4" />
                     </div>
                 </div>
                 <div className="bg-yellow-500 text-white shadow rounded-lg p-4 relative">
