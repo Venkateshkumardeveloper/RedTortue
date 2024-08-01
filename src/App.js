@@ -99,6 +99,7 @@ import Overview from './components/Overview/Overview';
 import User from './components/User/User';
 import Dashboard from './components/Dashboard/Dashboard';
 import Login from './components/Login/Login';
+import AddEditProduct from './components/AddEditProduct/AddEditProduct';
 
 function App() {
   const location = useLocation();
@@ -115,6 +116,8 @@ function App() {
           <Route path="/overview" element={<Overview />} />
           <Route path="/user" element={<User />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/add-product" element={<AddEditProduct />} />
+
         </Routes>
       </main>
     </div>

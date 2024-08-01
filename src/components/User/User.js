@@ -19,7 +19,9 @@ export default function User() {
     <div className="px-4 sm:px-6 lg:px-8 pt-4  ml-10 lg:ml-72 w-auto">
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto">
-          <h1 className="text-base font-semibold leading-6 text-custom-heading">Users</h1>
+          {/* <h1 className="text-base font-semibold leading-6 text-custom-heading">Users</h1> */}
+          <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-custom-heading">Users</h2>
+
           <p className="mt-2 text-sm text-gray-700">
             A list of all the users in your account including their name, location, email, and mobileno.
           </p>

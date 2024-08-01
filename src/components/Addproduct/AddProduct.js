@@ -1,935 +1,381 @@
-// import React from 'react';
 
-// const AddProduct = () => {
-//   return (
-//     <div className="p-6 bg-white shadow-md rounded-md">
-//       <h2 className="text-2xl font-semibold mb-6">Add New Product</h2>
-//       <form>
-//         <div className="grid grid-cols-2 gap-6 mb-6">
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Name Product</label>
-//             <input type="text" className="mt-1 block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//           </div>
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Description Product</label>
-//             <textarea className="mt-1 block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md"></textarea>
-//           </div>
-//         </div>
-//         <div className="grid grid-cols-2 gap-6 mb-6">
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Size</label>
-//             <div className="flex space-x-2 mt-1">
-//               <button className="px-3 py-2 bg-gray-200 rounded-md">XS</button>
-//               <button className="px-3 py-2 bg-green-500 text-white rounded-md">S</button>
-//               <button className="px-3 py-2 bg-gray-200 rounded-md">M</button>
-//               <button className="px-3 py-2 bg-gray-200 rounded-md">L</button>
-//               <button className="px-3 py-2 bg-gray-200 rounded-md">XL</button>
-//               <button className="px-3 py-2 bg-gray-200 rounded-md">XXL</button>
-//             </div>
-//           </div>
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Gender</label>
-//             <div className="flex space-x-2 mt-1">
-//               <button className="px-3 py-2 bg-green-500 text-white rounded-md">Men</button>
-//               <button className="px-3 py-2 bg-gray-200 rounded-md">Woman</button>
-//               <button className="px-3 py-2 bg-gray-200 rounded-md">Unisex</button>
-//             </div>
-//           </div>
-//         </div>
-//         <div className="grid grid-cols-2 gap-6 mb-6">
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Pricing And Stock</label>
-//             <div className="grid grid-cols-2 gap-4 mt-1">
-//               <input type="text" placeholder="Base Pricing" className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//               <input type="text" placeholder="Stock" className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//             </div>
-//           </div>
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Discount</label>
-//             <div className="grid grid-cols-2 gap-4 mt-1">
-//               <input type="text" placeholder="Discount" className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//               <input type="text" placeholder="Discount Type" className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//             </div>
-//           </div>
-//         </div>
-//         <div className="grid grid-cols-2 gap-6 mb-6">
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Upload Img</label>
-//             <div className="mt-1">
-//               <div className="flex space-x-2">
-//                 <img src="https://via.placeholder.com/100" className="h-20 w-20 rounded-md" alt="Product" />
-//                 <img src="https://via.placeholder.com/100" className="h-20 w-20 rounded-md" alt="Product" />
-//                 <img src="https://via.placeholder.com/100" className="h-20 w-20 rounded-md" alt="Product" />
-//                 <button className="h-20 w-20 flex items-center justify-center bg-gray-200 rounded-md">
-//                   <span className="text-gray-500">+</span>
-//                 </button>
-//               </div>
-//             </div>
-//           </div>
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Category</label>
-//             <select className="mt-1 block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md">
-//               <option>Jacket</option>
-//             </select>
-//             <button className="mt-2 px-3 py-2 bg-green-500 text-white rounded-md">Add Category</button>
-//           </div>
-//         </div>
-//         <div className="flex justify-end">
-//           <button className="px-6 py-3 bg-green-500 text-white rounded-md">Add Product</button>
-//         </div>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default AddProduct;
-
-
-// import React from 'react';
-
-// const AddProduct = () => {
-//   return (
-//     <div className="p-4 sm:p-6 bg-white shadow-md rounded-md">
-//       <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">Add New Product</h2>
-//       <form>
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Name Product</label>
-//             <input type="text" className="mt-1 block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//           </div>
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Description Product</label>
-//             <textarea className="mt-1 block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md"></textarea>
-//           </div>
-//         </div>
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Size</label>
-//             <div className="flex flex-wrap space-x-2 mt-1">
-//               <button className="px-3 py-2 bg-gray-200 rounded-md">XS</button>
-//               <button className="px-3 py-2 bg-green-500 text-white rounded-md">S</button>
-//               <button className="px-3 py-2 bg-gray-200 rounded-md">M</button>
-//               <button className="px-3 py-2 bg-gray-200 rounded-md">L</button>
-//               <button className="px-3 py-2 bg-gray-200 rounded-md">XL</button>
-//               <button className="px-3 py-2 bg-gray-200 rounded-md">XXL</button>
-//             </div>
-//           </div>
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Gender</label>
-//             <div className="flex flex-wrap space-x-2 mt-1">
-//               <button className="px-3 py-2 bg-green-500 text-white rounded-md">Men</button>
-//               <button className="px-3 py-2 bg-gray-200 rounded-md">Woman</button>
-//               <button className="px-3 py-2 bg-gray-200 rounded-md">Unisex</button>
-//             </div>
-//           </div>
-//         </div>
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Pricing And Stock</label>
-//             <div className="grid grid-cols-2 gap-2 sm:gap-4 mt-1">
-//               <input type="text" placeholder="Base Pricing" className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//               <input type="text" placeholder="Stock" className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//             </div>
-//           </div>
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Discount</label>
-//             <div className="grid grid-cols-2 gap-2 sm:gap-4 mt-1">
-//               <input type="text" placeholder="Discount" className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//               <input type="text" placeholder="Discount Type" className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//             </div>
-//           </div>
-//         </div>
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Upload Img</label>
-//             <div className="mt-1">
-//               <div className="flex flex-wrap space-x-2">
-//                 <img src="https://via.placeholder.com/100" className="h-20 w-20 rounded-md" alt="Product" />
-//                 <img src="https://via.placeholder.com/100" className="h-20 w-20 rounded-md" alt="Product" />
-//                 <img src="https://via.placeholder.com/100" className="h-20 w-20 rounded-md" alt="Product" />
-//                 <button className="h-20 w-20 flex items-center justify-center bg-gray-200 rounded-md">
-//                   <span className="text-gray-500">+</span>
-//                 </button>
-//               </div>
-//             </div>
-//           </div>
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Category</label>
-//             <select className="mt-1 block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md">
-//               <option>Jacket</option>
-//             </select>
-//             <button className="mt-2 px-3 py-2 bg-green-500 text-white rounded-md">Add Category</button>
-//           </div>
-//         </div>
-//         <div className="flex justify-end">
-//           <button className="px-6 py-3 bg-green-500 text-white rounded-md">Add Product</button>
-//         </div>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default AddProduct;
-
-
-// import React, { useState } from 'react';
-
-// const AddProduct = () => {
-//   const [images, setImages] = useState([]);
-
-//   const handleImageUpload = (event) => {
-//     const files = Array.from(event.target.files);
-//     const fileURLs = files.map(file => URL.createObjectURL(file));
-//     setImages(prevImages => [...prevImages, ...fileURLs]);
-//   };
-
-//   return (
-//     <div className="p-4 sm:p-6 bg-white shadow-md rounded-md">
-//       <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">Add New Product</h2>
-//       <form>
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Name Product</label>
-//             <input type="text" className="mt-1 block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//           </div>
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Description Product</label>
-//             <textarea className="mt-1 block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md"></textarea>
-//           </div>
-//         </div>
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Size</label>
-//             <div className="flex flex-wrap space-x-2 mt-1">
-//               <button className="px-3 py-2 bg-gray-200 rounded-md">XS</button>
-//               <button className="px-3 py-2 bg-green-500 text-white rounded-md">S</button>
-//               <button className="px-3 py-2 bg-gray-200 rounded-md">M</button>
-//               <button className="px-3 py-2 bg-gray-200 rounded-md">L</button>
-//               <button className="px-3 py-2 bg-gray-200 rounded-md">XL</button>
-//               <button className="px-3 py-2 bg-gray-200 rounded-md">XXL</button>
-//             </div>
-//           </div>
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Gender</label>
-//             <div className="flex flex-wrap space-x-2 mt-1">
-//               <button className="px-3 py-2 bg-green-500 text-white rounded-md">Men</button>
-//               <button className="px-3 py-2 bg-gray-200 rounded-md">Woman</button>
-//               <button className="px-3 py-2 bg-gray-200 rounded-md">Unisex</button>
-//             </div>
-//           </div>
-//         </div>
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Pricing And Stock</label>
-//             <div className="grid grid-cols-2 gap-2 sm:gap-4 mt-1">
-//               <input type="text" placeholder="Base Pricing" className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//               <input type="text" placeholder="Stock" className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//             </div>
-//           </div>
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Discount</label>
-//             <div className="grid grid-cols-2 gap-2 sm:gap-4 mt-1">
-//               <input type="text" placeholder="Discount" className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//               <input type="text" placeholder="Discount Type" className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//             </div>
-//           </div>
-//         </div>
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Upload Img</label>
-//             <div className="mt-1">
-//               <input type="file" multiple onChange={handleImageUpload} className="hidden" id="file-input" />
-//               <label htmlFor="file-input" className="cursor-pointer">
-//                 <div className="flex flex-wrap space-x-2">
-//                   {images.map((image, index) => (
-//                     <img key={index} src={image} className="h-20 w-20 rounded-md" alt={`Product ${index + 1}`} />
-//                   ))}
-//                   <button type="button" className="h-20 w-20 flex items-center justify-center bg-gray-200 rounded-md">
-//                     <span className="text-gray-500">+</span>
-//                   </button>
-//                 </div>
-//               </label>
-//             </div>
-//           </div>
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Category</label>
-//             <select className="mt-1 block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md">
-//               <option>Jacket</option>
-//             </select>
-//             <button className="mt-2 px-3 py-2 bg-green-500 text-white rounded-md">Add Category</button>
-//           </div>
-//         </div>
-//         <div className="flex justify-end">
-//           <button className="px-6 py-3 bg-green-500 text-white rounded-md">Add Product</button>
-//         </div>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default AddProduct;
-
-
-// import React, { useState } from 'react';
-
-// const AddProduct = () => {
-//   const [images, setImages] = useState([]);
-
-//   const handleImageUpload = (event) => {
-//     const files = Array.from(event.target.files);
-//     const fileURLs = files.map(file => URL.createObjectURL(file));
-//     setImages(prevImages => [...prevImages, ...fileURLs]);
-//   };
-
-//   return (
-//     <div className="p-4 sm:p-6 bg-white shadow-md rounded-md">
-//       <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">Add New Product</h2>
-//       <form>
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Name Product</label>
-//             <input type="text" className="mt-1 block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//           </div>
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Description Product</label>
-//             <textarea className="mt-1 block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md"></textarea>
-//           </div>
-//         </div>
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Size</label>
-//             <div className="flex flex-wrap space-x-2 mt-1">
-//               <button type="button" className="px-3 py-2 bg-gray-200 rounded-md">XS</button>
-//               <button type="button" className="px-3 py-2 bg-green-500 text-white rounded-md">S</button>
-//               <button type="button" className="px-3 py-2 bg-gray-200 rounded-md">M</button>
-//               <button type="button" className="px-3 py-2 bg-gray-200 rounded-md">L</button>
-//               <button type="button" className="px-3 py-2 bg-gray-200 rounded-md">XL</button>
-//               <button type="button" className="px-3 py-2 bg-gray-200 rounded-md">XXL</button>
-//             </div>
-//           </div>
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Gender</label>
-//             <div className="flex flex-wrap space-x-2 mt-1">
-//               <button type="button" className="px-3 py-2 bg-green-500 text-white rounded-md">Men</button>
-//               <button type="button" className="px-3 py-2 bg-gray-200 rounded-md">Woman</button>
-//               <button type="button" className="px-3 py-2 bg-gray-200 rounded-md">Unisex</button>
-//             </div>
-//           </div>
-//         </div>
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Pricing And Stock</label>
-//             <div className="grid grid-cols-2 gap-2 sm:gap-4 mt-1">
-//               <input type="text" placeholder="Base Pricing" className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//               <input type="text" placeholder="Stock" className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//             </div>
-//           </div>
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Discount</label>
-//             <div className="grid grid-cols-2 gap-2 sm:gap-4 mt-1">
-//               <input type="text" placeholder="Discount" className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//               <input type="text" placeholder="Discount Type" className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//             </div>
-//           </div>
-//         </div>
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Upload Img</label>
-//             <div className="mt-1">
-//               <input type="file" multiple onChange={handleImageUpload} className="hidden" id="file-input" />
-//               <label htmlFor="file-input" className="cursor-pointer">
-//                 <div className="flex flex-wrap space-x-2">
-//                   {images.map((image, index) => (
-//                     <img key={index} src={image} className="h-20 w-20 rounded-md" alt={`Product ${index + 1}`} />
-//                   ))}
-//                   <div className="h-20 w-20 flex items-center justify-center bg-gray-200 rounded-md">
-//                     <span className="text-gray-500">+</span>
-//                   </div>
-//                 </div>
-//               </label>
-//             </div>
-//           </div>
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Category</label>
-//             <select className="mt-1 block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md">
-//               <option>Jacket</option>
-//             </select>
-//             <button type="button" className="mt-2 px-3 py-2 bg-green-500 text-white rounded-md">Add Category</button>
-//           </div>
-//         </div>
-//         <div className="flex justify-end">
-//           <button type="button" className="px-6 py-3 bg-green-500 text-white rounded-md">Add Product</button>
-//         </div>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default AddProduct;
-
-
-// import React, { useState } from 'react';
-// import { XMarkIcon } from '@heroicons/react/24/outline'; // Updated import for Heroicons v2
-
-// const AddProduct = () => {
-//   const [images, setImages] = useState([]);
-
-//   const handleImageUpload = (event) => {
-//     const files = Array.from(event.target.files);
-//     const fileURLs = files.map((file) => URL.createObjectURL(file));
-//     setImages((prevImages) => [...prevImages, ...fileURLs]);
-//   };
-
-//   const handleImageDelete = (index) => {
-//     setImages((prevImages) => prevImages.filter((_, i) => i !== index));
-//   };
-
-//   return (
-//     <div className="p-4 sm:p-6 bg-white shadow-md rounded-md">
-//       <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">Add New Product</h2>
-//       <form>
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Name Product</label>
-//             <input type="text" className="mt-1 block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//           </div>
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Description Product</label>
-//             <textarea className="mt-1 block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md"></textarea>
-//           </div>
-//         </div>
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Size</label>
-//             <div className="flex flex-wrap space-x-2 mt-1">
-//               <button type="button" className="px-3 py-2 bg-gray-200 rounded-md">XS</button>
-//               <button type="button" className="px-3 py-2 bg-green-500 text-white rounded-md">S</button>
-//               <button type="button" className="px-3 py-2 bg-gray-200 rounded-md">M</button>
-//               <button type="button" className="px-3 py-2 bg-gray-200 rounded-md">L</button>
-//               <button type="button" className="px-3 py-2 bg-gray-200 rounded-md">XL</button>
-//               <button type="button" className="px-3 py-2 bg-gray-200 rounded-md">XXL</button>
-//             </div>
-//           </div>
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Gender</label>
-//             <div className="flex flex-wrap space-x-2 mt-1">
-//               <button type="button" className="px-3 py-2 bg-green-500 text-white rounded-md">Men</button>
-//               <button type="button" className="px-3 py-2 bg-gray-200 rounded-md">Woman</button>
-//               <button type="button" className="px-3 py-2 bg-gray-200 rounded-md">Unisex</button>
-//             </div>
-//           </div>
-//         </div>
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Pricing And Stock</label>
-//             <div className="grid grid-cols-2 gap-2 sm:gap-4 mt-1">
-//               <input type="text" placeholder="Base Pricing" className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//               <input type="text" placeholder="Stock" className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//             </div>
-//           </div>
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Discount</label>
-//             <div className="grid grid-cols-2 gap-2 sm:gap-4 mt-1">
-//               <input type="text" placeholder="Discount" className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//               <input type="text" placeholder="Discount Type" className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//             </div>
-//           </div>
-//         </div>
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Upload Img</label>
-//             <div className="mt-1">
-//               <input type="file" multiple onChange={handleImageUpload} className="hidden" id="file-input" />
-//               <label htmlFor="file-input" className="cursor-pointer">
-//                 <div className="flex flex-wrap space-x-2">
-//                   {images.map((image, index) => (
-//                     <div key={index} className="relative">
-//                       <img src={image} className="h-20 w-20 rounded-md" alt={`Product ${index + 1}`} />
-//                       <button
-//                         type="button"
-//                         className="absolute -top-1 -right-2  bg-red-500 text-white rounded-full"
-//                         onClick={() => handleImageDelete(index)}
-//                       >
-//                         < XMarkIcon className="h-4 w-4" />
-//                       </button>
-//                     </div>
-//                   ))}
-//                   <div className="h-20 w-20 flex items-center justify-center bg-gray-200 rounded-md">
-//                     <span className="text-gray-500">+</span>
-//                   </div>
-//                 </div>
-//               </label>
-//             </div>
-//           </div>
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Category</label>
-//             <select className="mt-1 block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md">
-//               <option>Jacket</option>
-//               <option>TShrit</option>
-
-//             </select>
-//             <button type="button" className="mt-2 px-3 py-2 bg-green-500 text-white rounded-md">Add Category</button>
-//           </div>
-//         </div>
-//         <div className="flex justify-end">
-//           <button type="button" className="px-6 py-3 bg-green-500 text-white rounded-md">Add Product</button>
-//         </div>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default AddProduct;
-
-
-
-// import React, { useState } from 'react';
-// import { XMarkIcon } from '@heroicons/react/24/outline';
-
-// const AddProduct = () => {
-//   const [images, setImages] = useState([]);
-//   const [selectedSizes, setSelectedSizes] = useState([]);
-//   const [selectedGender, setSelectedGender] = useState(null);
-
-//   const handleImageUpload = (event) => {
-//     const files = Array.from(event.target.files);
-//     const fileURLs = files.map((file) => URL.createObjectURL(file));
-//     setImages((prevImages) => [...prevImages, ...fileURLs]);
-//   };
-
-//   const handleImageDelete = (index) => {
-//     setImages((prevImages) => prevImages.filter((_, i) => i !== index));
-//   };
-
-//   const toggleSize = (size) => {
-//     setSelectedSizes((prevSizes) =>
-//       prevSizes.includes(size)
-//         ? prevSizes.filter((s) => s !== size)
-//         : [...prevSizes, size]
-//     );
-//   };
-
-//   const selectGender = (gender) => {
-//     setSelectedGender(gender);
-//   };
-
-//   return (
-//     <div className="p-4 sm:p-6 bg-white shadow-md rounded-md">
-//       <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">Add New Product</h2>
-//       <form>
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Name Product</label>
-//             <input type="text" className="mt-1 block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//           </div>
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Description Product</label>
-//             <textarea className="mt-1 block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md"></textarea>
-//           </div>
-//         </div>
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Size</label>
-//             <div className="flex flex-wrap space-x-2 mt-1">
-//               {['XS', 'S', 'M', 'L', 'XL', 'XXL'].map((size) => (
-//                 <button
-//                   key={size}
-//                   type="button"
-//                   className={`px-3 py-2 rounded-md ${
-//                     selectedSizes.includes(size) ? 'bg-green-500 text-white' : 'bg-gray-200'
-//                   }`}
-//                   onClick={() => toggleSize(size)}
-//                 >
-//                   {size}
-//                 </button>
-//               ))}
-//             </div>
-//           </div>
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Gender</label>
-//             <div className="flex flex-wrap space-x-2 mt-1">
-//               {['Men', 'Women', 'Unisex'].map((gender) => (
-//                 <button
-//                   key={gender}
-//                   type="button"
-//                   className={`px-3 py-2 rounded-md ${
-//                     selectedGender === gender ? 'bg-green-500 text-white' : 'bg-gray-200'
-//                   }`}
-//                   onClick={() => selectGender(gender)}
-//                 >
-//                   {gender}
-//                 </button>
-//               ))}
-//             </div>
-//           </div>
-//         </div>
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Pricing And Stock</label>
-//             <div className="grid grid-cols-2 gap-2 sm:gap-4 mt-1">
-//               <input type="text" placeholder="Base Pricing" className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//               <input type="text" placeholder="Stock" className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//             </div>
-//           </div>
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Discount</label>
-//             <div className="grid grid-cols-2 gap-2 sm:gap-4 mt-1">
-//               <input type="text" placeholder="Discount" className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//               <input type="text" placeholder="Discount Type" className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" />
-//             </div>
-//           </div>
-//         </div>
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Upload Img</label>
-//             <div className="mt-1">
-//               <input type="file" multiple onChange={handleImageUpload} className="hidden" id="file-input" />
-//               <label htmlFor="file-input" className="cursor-pointer">
-//                 <div className="flex flex-wrap space-x-2">
-//                   {images.map((image, index) => (
-//                     <div key={index} className="relative">
-//                       <img src={image} className="h-20 w-20 rounded-md" alt={`Product ${index + 1}`} />
-//                       <button
-//                         type="button"
-//                         className="absolute -top-1 -right-2  bg-red-500 text-white rounded-full"
-//                         onClick={() => handleImageDelete(index)}
-//                       >
-//                         <XMarkIcon className="h-4 w-4" />
-//                       </button>
-//                     </div>
-//                   ))}
-//                   <div className="h-20 w-20 flex items-center justify-center bg-gray-200 rounded-md">
-//                     <span className="text-gray-500">+</span>
-//                   </div>
-//                 </div>
-//               </label>
-//             </div>
-//           </div>
-//           <div>
-//             <label className="block text-sm font-medium text-gray-700">Category</label>
-//             <select className="mt-1 block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md">
-//               <option>Jacket</option>
-//             </select>
-//             <button type="button" className="mt-2 px-3 py-2 bg-green-500 text-white rounded-md">Add Category</button>
-//           </div>
-//         </div>
-//         <div className="flex justify-end">
-//           <button type="button" className="px-6 py-3 bg-green-500 text-white rounded-md">Add Product</button>
-//         </div>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default AddProduct;
 
 
 import React, { useState } from 'react';
-import { XMarkIcon } from '@heroicons/react/24/outline';
+import {
+  Combobox,
+  ComboboxButton,
+  ComboboxInput,
+  ComboboxOption,
+  ComboboxOptions,
+} from '@headlessui/react';
+import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid';
 
-const AddProduct = () => {
-  const [images, setImages] = useState([]);
-  const [selectedSizes, setSelectedSizes] = useState([]);
-  const [selectedGender, setSelectedGender] = useState(null);
-  const [selectedColors, setSelectedColors] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState('Jacket');
-  const [selectedSubcategory, setSelectedSubcategory] = useState('');
-  const [productDetails, setProductDetails] = useState(null);
+const categories = [
+  { id: 1, name: 'Tops' },
+  { id: 2, name: 'Bottoms' },
+  { id: 3, name: 'Accessories' },
+  // Add more categories as needed
+];
 
-  const handleImageUpload = (event) => {
-    const files = Array.from(event.target.files);
-    const fileURLs = files.map((file) => URL.createObjectURL(file));
-    setImages((prevImages) => [...prevImages, ...fileURLs]);
+function AddProduct() {
+  const [variants, setVariants] = useState([{ color: '', sizes: [], images: [] }]);
+  const [productDetails, setProductDetails] = useState({
+    name: '',
+    description: '',
+    category: '',
+    sizeType: 'alphabetical',
+    gender: '',
+  });
+  const [productData, setProductData] = useState(null);
+  const [error, setError] = useState('');
+  const [query, setQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
+  const handleAddVariant = () => {
+    const sizes = productDetails.sizeType === 'alphabetical'
+      ? ['S', 'M', 'L', 'XL', 'XXL'].map(size => ({ size, quantity: 1, price: 0, discount: 0, finalPrice: 0 }))
+      : Array.from({ length: 19 }, (_, i) => ({ size: (28 + i).toString(), quantity: 1, price: 0, discount: 0, finalPrice: 0 }));
+
+    setVariants([...variants, { color: '', sizes, images: [] }]);
   };
 
-  const handleImageDelete = (index) => {
-    setImages((prevImages) => prevImages.filter((_, i) => i !== index));
+  const handleVariantChange = (variantIndex, sizeIndex, field, value) => {
+    const newVariants = [...variants];
+    newVariants[variantIndex].sizes[sizeIndex][field] = value;
+    setVariants(newVariants);
   };
 
-  const toggleSize = (size) => {
-    setSelectedSizes((prevSizes) =>
-      prevSizes.includes(size)
-        ? prevSizes.filter((s) => s !== size)
-        : [...prevSizes, size]
-    );
+  const handleColorChange = (variantIndex, value) => {
+    const newVariants = [...variants];
+    newVariants[variantIndex].color = value;
+    setVariants(newVariants);
   };
 
-  const selectGender = (gender) => {
-    setSelectedGender(gender);
+  const handleImageUpload = (variantIndex, files) => {
+    const newVariants = [...variants];
+    newVariants[variantIndex].images.push(...Array.from(files).map(file => URL.createObjectURL(file)));
+    setVariants(newVariants);
   };
 
-  const toggleColor = (color) => {
-    setSelectedColors((prevColors) =>
-      prevColors.includes(color)
-        ? prevColors.filter((c) => c !== color)
-        : [...prevColors, color]
-    );
+  const handleRemoveImage = (variantIndex, imgIndex) => {
+    const newVariants = [...variants];
+    newVariants[variantIndex].images.splice(imgIndex, 1);
+    setVariants(newVariants);
   };
 
-  const handleAddProduct = (event) => {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    const name = formData.get('name');
-    const description = formData.get('description');
-    const basePrice = formData.get('basePrice');
-    const stock = formData.get('stock');
-    const discount = formData.get('discount');
-    const discountType = formData.get('discountType');
-    const sizeStock = selectedSizes.reduce((acc, size) => {
-      acc[size] = formData.get(`stock-${size}`);
-      return acc;
-    }, {});
+  const handleProductDetailsChange = (field, value) => {
+    setProductDetails({ ...productDetails, [field]: value });
+    if (field === 'sizeType') {
+      const newVariants = variants.map(variant => ({
+        ...variant,
+        sizes: value === 'numerical'
+          ? Array.from({ length: 19 }, (_, i) => ({
+            size: (28 + i).toString(),
+            quantity: 1,
+            price: 0,
+            discount: 0,
+            finalPrice: 0
+          }))
+          : ['S', 'M', 'L', 'XL', 'XXL'].map(size => ({
+            size,
+            quantity: 1,
+            price: 0,
+            discount: 0,
+            finalPrice: 0
+          }))
+      }));
+      setVariants(newVariants);
+    }
+  };
 
-    if (
-      !name ||
-      !description ||
-      !basePrice ||
-      !stock ||
-      !discount ||
-      !discountType ||
-      !selectedSizes.length ||
-      !selectedGender ||
-      !selectedColors.length ||
-      !selectedCategory ||
-      !selectedSubcategory ||
-      images.length === 0
-    ) {
-      alert('Please fill in all required fields.');
+  const handleSubmit = () => {
+    const { name, description, gender } = productDetails;
+
+    if (!name || !description || !selectedCategory || !gender) {
+      setError('Please fill in all required fields.');
       return;
     }
 
-    const product = {
-      name,
-      description,
-      basePrice,
-      stock,
-      discount,
-      discountType,
-      sizes: selectedSizes,
-      sizeStock,
-      gender: selectedGender,
-      colors: selectedColors,
-      category: selectedCategory,
-      subcategory: selectedSubcategory,
-      images,
-    };
-
-    setProductDetails(product);
-    alert('Product successfully added!');
+    const data = { ...productDetails, category: selectedCategory.name, variants };
+    setProductData(data);
+    setError('');
+    console.log('Submitting data:', data);
   };
 
-  return (
-    // <div className="p-4 ml-72  sm:p-6  bg-white shadow-md rounded-md">
-    <div className="p-4 ml-10 lg:ml-72 sm:p-6 bg-white shadow rounded-md">
+  const filteredCategories = query === ''
+    ? categories
+    : categories.filter((category) => category.name.toLowerCase().includes(query.toLowerCase()));
 
-      <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-custom-heading">Add New Product</h2>
-      <form onSubmit={handleAddProduct}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
-          <div>
+  return (
+    <div className="p-4 lg:ml-10 xl:ml-80 m-5 sm:p-6 bg-white shadow rounded-md">
+      <div className="flex flex-col lg:flex-row">
+        <div className="w-full lg:w-1/2 p-4">
+          <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-custom-heading">Add Product</h2>
+          <div className="mb-4">
             <label className="block text-sm font-medium text-gray-700">Product Name</label>
             <input
               type="text"
-              name="name"
-              required
-              className="mt-1 block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md"
+              className="mt-1 p-2 w-full border rounded-md"
+              value={productDetails.name}
+              onChange={(e) => handleProductDetailsChange('name', e.target.value)}
             />
           </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Product Description</label>
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700">Description</label>
             <textarea
-              name="description"
-              required
-              className="mt-1 block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md"
+              className="mt-1 p-2 w-full border rounded-md"
+              value={productDetails.description}
+              onChange={(e) => handleProductDetailsChange('description', e.target.value)}
             ></textarea>
           </div>
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700">Category</label>
+            <Combobox
+              as="div"
+              value={selectedCategory}
+              onChange={(category) => {
+                setQuery('');
+                setSelectedCategory(category);
+              }}
+            >
+              <div className="relative mt-2">
+                <ComboboxInput
+                  className="w-full rounded-md border-0 bg-white py-1.5 pl-3 pr-10 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  onChange={(event) => setQuery(event.target.value)}
+                  displayValue={(category) => category?.name}
+                />
+                <ComboboxButton className="absolute inset-y-0 right-0 flex items-center rounded-r-md px-2 focus:outline-none">
+                  <ChevronUpDownIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+                </ComboboxButton>
+
+                {filteredCategories.length > 0 && (
+                  <ComboboxOptions className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                    {filteredCategories.map((category) => (
+                      <ComboboxOption
+                        key={category.id}
+                        value={category}
+                        className="group relative cursor-default select-none py-2 pl-3 pr-9 text-gray-900 data-[focus]:bg-indigo-600 data-[focus]:text-white"
+                      >
+                        <span className="block truncate group-data-[selected]:font-semibold">{category.name}</span>
+
+                        <span className="absolute inset-y-0 right-0 hidden items-center pr-4 text-indigo-600 group-data-[selected]:flex group-data-[focus]:text-white">
+                          <CheckIcon className="h-5 w-5" aria-hidden="true" />
+                        </span>
+                      </ComboboxOption>
+                    ))}
+                  </ComboboxOptions>
+                )}
+              </div>
+            </Combobox>
+          </div>
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700">Size Type</label>
+            <select
+              className="mt-1 p-2 w-full border rounded-md"
+              value={productDetails.sizeType}
+              onChange={(e) => handleProductDetailsChange('sizeType', e.target.value)}
+            >
+              
+              <option value="alphabetical">Alphabetical</option>
+              <option value="numerical">Numerical</option>
+            </select>
+          </div>
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700">Gender</label>
+            <select
+              className="mt-1 p-2 w-full border rounded-md"
+              value={productDetails.gender}
+              onChange={(e) => handleProductDetailsChange('gender', e.target.value)}
+            >
+              <option value="">Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Kids">Kids</option>
+            </select>
+          </div>
+          <button
+            className="px-4 py-2 bg-blue-500 text-white rounded-md mt-4"
+            onClick={handleSubmit}
+          >
+            Add Product
+          </button>
+          {error && <div className="mt-4 text-red-500">{error}</div>}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Size and Stock</label>
-            <div className="flex flex-wrap space-x-2 mt-1">
-              {['XS', 'S', 'M', 'L', 'XL', 'XXL'].map((size) => (
-                <div key={size} className="flex items-center space-x-2">
-                  <button
-                    type="button"
-                    className={`px-3 py-2 rounded-md ${
-                      selectedSizes.includes(size) ? 'bg-green-500 text-white' : 'bg-gray-200'
-                    }`}
-                    onClick={() => toggleSize(size)}
-                  >
-                    {size}
-                  </button>
-                  {selectedSizes.includes(size) && (
+
+        <div className="w-full lg:w-1/2 p-4">
+          <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-custom-heading">Variants</h2>
+          {variants.map((variant, variantIndex) => (
+            <div key={variantIndex} className="mb-4 p-4 border rounded-lg">
+              <div className="flex items-center">
+                <label className="block text-sm font-medium text-gray-700">Color</label>
+                <input
+                  type="text"
+                  className="mt-1 p-2 w-1/2 border rounded-md"
+                  value={variant.color}
+                  onChange={(e) => handleColorChange(variantIndex, e.target.value)}
+                />
+                <div
+                  className="ml-2 w-8 h-8 rounded-full"
+                  style={{ backgroundColor: variant.color || '#e5e7eb' }} // Fallback to gray if no color
+                ></div>
+                <button
+                  className="ml-2 text-red-500"
+                  onClick={() => {
+                    const newVariants = variants.filter((_, index) => index !== variantIndex);
+                    setVariants(newVariants);
+                  }}
+                >
+                  Remove Variant
+                </button>
+              </div>
+              {variant.sizes.map((size, sizeIndex) => (
+                <div key={sizeIndex} className="mb-4 border rounded-lg p-2 relative">
+                  <div className="mb-2 flex justify-between items-center">
+                    <span className="block text-sm font-medium text-gray-700">Size: {size.size}</span>
+                    <button
+                      className="text-red-500"
+                      onClick={() => {
+                        const newVariants = [...variants];
+                        newVariants[variantIndex].sizes = newVariants[variantIndex].sizes.filter((_, idx) => idx !== sizeIndex);
+                        setVariants(newVariants);
+                      }}
+                    >
+                      &times;
+                    </button>
+                  </div>
+                  <div className="mb-2">
+                    <label className="block text-sm font-medium text-gray-700">Quantity</label>
                     <input
                       type="number"
-                      name={`stock-${size}`}
-                      required
-                      placeholder="Stock"
-                      className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md"
+                      className="mt-1 p-2 w-full border rounded-md"
+                      value={size.quantity}
+                      onChange={(e) => handleVariantChange(variantIndex, sizeIndex, 'quantity', e.target.value)}
+                      min="1"
                     />
+                  </div>
+                  <div className="mb-2">
+                    <label className="block text-sm font-medium text-gray-700">Price</label>
+                    <input
+                      type="number"
+                      className="mt-1 p-2 w-full border rounded-md"
+                      value={size.price}
+                      onChange={(e) => handleVariantChange(variantIndex, sizeIndex, 'price', e.target.value)}
+                    />
+                  </div>
+                  <div className="mb-2">
+                    <label className="block text-sm font-medium text-gray-700">Discount</label>
+                    <input
+                      type="number"
+                      className="mt-1 p-2 w-full border rounded-md"
+                      value={size.discount}
+                      onChange={(e) => handleVariantChange(variantIndex, sizeIndex, 'discount', e.target.value)}
+                    />
+                  </div>
+                  <div className="mb-2">
+                    <label className="block text-sm font-medium text-gray-700">Final Price</label>
+                    <input
+                      type="number"
+                      className="mt-1 p-2 w-full border rounded-md"
+                      value={size.finalPrice}
+                      onChange={(e) => handleVariantChange(variantIndex, sizeIndex, 'finalPrice', e.target.value)}
+                    />
+                  </div>
+                </div>
+              ))}
+              <div className="mb-2">
+                <label className="block text-sm font-medium text-gray-700">Images</label>
+                <div className="flex items-center">
+                  <input
+                    type="file"
+                    multiple
+                    className="hidden"
+                    id={`upload-${variantIndex}`}
+                    onChange={(e) => handleImageUpload(variantIndex, e.target.files)}
+                  />
+                  <label
+                    htmlFor={`upload-${variantIndex}`}
+                    className="flex items-center justify-center w-24 h-24 bg-gray-200 border border-gray-300 text-gray-500 rounded-md cursor-pointer"
+                  >
+                    <span>+</span>
+                  </label>
+                  {variant.images.map((image, imgIndex) => (
+                    <div key={imgIndex} className="relative ml-4">
+                      <img
+                        src={image}
+                        alt={`variant-${variantIndex}-img-${imgIndex}`}
+                        className="w-24 h-24 object-cover rounded-md"
+                      />
+                      <button
+                        className="absolute top-0 right-0 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center"
+                        onClick={() => handleRemoveImage(variantIndex, imgIndex)}
+                      >
+                        &times;
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+          <button
+            className="px-4 py-2 bg-green-500 text-white rounded-md"
+            onClick={handleAddVariant}
+          >
+            Add Variant
+          </button>
+        </div>
+      </div>
+
+      {productData && (
+        <div className="mt-8 p-4 border-t border-gray-300">
+          <h3 className="text-lg font-semibold mb-4">Product Data</h3>
+          <div className="space-y-4">
+            <div>
+              <h4 className="font-semibold">Product Details</h4>
+              <p><strong>Name:</strong> {productData.name}</p>
+              <p><strong>Description:</strong> {productData.description}</p>
+              <p><strong>Category:</strong> {productData.category}</p>
+              <p><strong>Size Type:</strong> {productData.sizeType}</p>
+              <p><strong>Gender:</strong> {productData.gender}</p>
+            </div>
+            <div>
+              <h4 className="font-semibold">Variants</h4>
+              {productData.variants.map((variant, idx) => (
+                <div key={idx} className="border rounded-lg p-4 mb-4">
+                  <p><strong>Color:</strong> {variant.color}</p>
+                  {variant.sizes.map((size, sizeIdx) => (
+                    <div key={sizeIdx} className="border-t pt-2 mt-2">
+                      <p><strong>Size:</strong> {size.size}</p>
+                      <p><strong>Quantity:</strong> {size.quantity}</p>
+                      <p><strong>Price:</strong> {size.price}</p>
+                      <p><strong>Discount:</strong> {size.discount}</p>
+                      <p><strong>Final Price:</strong> {size.finalPrice}</p>
+                    </div>
+                  ))}
+                  {variant.images.length > 0 && (
+                    <div className="mt-2">
+                      <strong>Images:</strong>
+                      <div className="flex mt-2">
+                        {variant.images.map((image, imgIdx) => (
+                          <img
+                            key={imgIdx}
+                            src={image}
+                            alt={`variant-${idx}-img-${imgIdx}`}
+                            className="w-24 h-24 object-cover rounded-md mr-2"
+                          />
+                        ))}
+                      </div>
+                    </div>
                   )}
                 </div>
               ))}
             </div>
           </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Gender</label>
-            <div className="flex flex-wrap space-x-2 mt-1">
-              {['Men', 'Women', 'Unisex'].map((gender) => (
-                <button
-                  key={gender}
-                  type="button"
-                  className={`px-3 py-2 rounded-md ${
-                    selectedGender === gender ? 'bg-green-500 text-white' : 'bg-gray-200'
-                  }`}
-                  onClick={() => selectGender(gender)}
-                >
-                  {gender}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Pricing and Stock</label>
-            <div className="grid grid-cols-2 gap-2 sm:gap-4 mt-1">
-              <input
-                type="number"
-                name="basePrice"
-                required
-                placeholder="Base Pricing"
-                className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md"
-              />
-              <input
-                type="number"
-                name="stock"
-                required
-                placeholder="Total Stock"
-                className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md"
-              />
-            </div>
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Discount</label>
-            <div className="grid grid-cols-2 gap-2 sm:gap-4 mt-1">
-              <input
-                type="number"
-                name="discount"
-                required
-                placeholder="Discount"
-                className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md"
-              />
-              <input
-                type="text"
-                name="discountType"
-                required
-                placeholder="Discount Type"
-                className="px-3 py-2 bg-gray-50 border border-gray-300 rounded-md"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Colors</label>
-            <div className="flex flex-wrap space-x-2 mt-1">
-              {['Red', 'Blue', 'Green', 'Black', 'White'].map((color) => (
-                <button
-                  key={color}
-                  type="button"
-                  className={`px-3 py-2 rounded-md ${
-                    selectedColors.includes(color) ? 'bg-green-500 text-white' : 'bg-gray-200'
-                  }`}
-                  onClick={() => toggleColor(color)}
-                >
-                  {color}
-                </button>
-              ))}
-            </div>
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Upload Images</label>
-            <div className="mt-1">
-              <input type="file" multiple onChange={handleImageUpload} className="hidden" id="file-input" />
-              <label htmlFor="file-input" className="cursor-pointer">
-                <div className="flex flex-wrap space-x-2">
-                  {images.map((image, index) => (
-                    <div key={index} className="relative">
-                      <img src={image} className="h-20 w-20 rounded-md" alt={`Product ${index + 1}`} />
-                      <button
-                        type="button"
-                        className="absolute -top-1 -right-2 bg-red-500 text-white rounded-full"
-                        onClick={() => handleImageDelete(index)}
-                      >
-                        <XMarkIcon className="h-4 w-4" />
-                      </button>
-                    </div>
-                  ))}
-                  <div className="h-20 w-20 flex items-center justify-center bg-gray-200 rounded-md">
-                    <span className="text-gray-500">+</span>
-                  </div>
-                </div>
-              </label>
-            </div>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Category</label>
-            <select
-              name="category"
-              required
-              className="mt-1 block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md"
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-            >
-              <option value="Jacket">Jacket</option>
-              <option value="TShirt">TShirt</option>
-            </select>
-            
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Subcategory</label>
-            <input
-              type="text"
-              name="subcategory"
-              required
-              className="mt-1 block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md"
-              value={selectedSubcategory}
-              onChange={(e) => setSelectedSubcategory(e.target.value)}
-            />
-          </div>
-        </div>
-        <div className="flex justify-end">
-          <button type="submit" className="px-6 py-3 bg-custom-red text-white rounded-md">
-            Add Product
-          </button>
-        </div>
-      </form>
-      {productDetails && (
-        <div className="mt-6 p-4 bg-gray-50 border border-gray-200 rounded-md">
-          <h3 className="text-lg font-semibold mb-2">Added Product Details</h3>
-          <p><strong>Name:</strong> {productDetails.name}</p>
-          <p><strong>Description:</strong> {productDetails.description}</p>
-          <p><strong>Base Price:</strong> {productDetails.basePrice}</p>
-          <p><strong>Total Stock:</strong> {productDetails.stock}</p>
-          <p><strong>Discount:</strong> {productDetails.discount}</p>
-          <p><strong>Discount Type:</strong> {productDetails.discountType}</p>
-          <p><strong>Sizes:</strong> {productDetails.sizes.join(', ')}</p>
-          <p><strong>Size Stock:</strong> {JSON.stringify(productDetails.sizeStock)}</p>
-          <p><strong>Gender:</strong> {productDetails.gender}</p>
-          <p><strong>Colors:</strong> {productDetails.colors.join(', ')}</p>
-          <p><strong>Category:</strong> {productDetails.category}</p>
-          <p><strong>Subcategory:</strong> {productDetails.subcategory}</p>
-          <div className="flex flex-wrap space-x-2 mt-2">
-            {productDetails.images.map((image, index) => (
-              <img key={index} src={image} className="h-20 w-20 rounded-md" alt={`Product ${index + 1}`} />
-            ))}
-          </div>
         </div>
       )}
     </div>
   );
-};
+}
 
 export default AddProduct;
