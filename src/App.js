@@ -100,6 +100,7 @@ import User from './components/User/User';
 import Dashboard from './components/Dashboard/Dashboard';
 import Login from './components/Login/Login';
 import AddEditProduct from './components/AddEditProduct/AddEditProduct';
+import Orders from './components/Orders/Orders';
 
 function App() {
   const location = useLocation();
@@ -115,6 +116,7 @@ function App() {
           <Route path="/products" element={<AddProduct />} />
           <Route path="/overview" element={<Overview />} />
           <Route path="/user" element={<User />} />
+          <Route path="/Orders" element={<Orders />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/add-product" element={<AddEditProduct />} />
 

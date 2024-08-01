@@ -1,4 +1,6 @@
 import React from 'react';
+import * as XLSX from 'xlsx';
+import { FaTable } from 'react-icons/fa';
 
 const people = [
   // Example data structure
@@ -15,6 +17,17 @@ const people = [
 ];
 
 export default function User() {
+
+  const handleExportUsersData =  () => {
+    exportToExcel(people, 'Customers');
+  };
+  const exportToExcel = (data, fileName) => {
+    const worksheet = XLSX.utils.json_to_sheet(data);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet1');
+    XLSX.writeFile(workbook, `${fileName}.xlsx`);
+  };
+  
   return (
     <div className="px-4 sm:px-6 lg:px-8 pt-4  ml-10 lg:ml-72 w-auto">
       <div className="sm:flex sm:items-center">
@@ -27,12 +40,14 @@ export default function User() {
           </p>
         </div>
         <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
-          {/* <button
-            type="button"
-            className="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-          >
-            Add user
-          </button> */}
+          <button
+        type="button"
+        className="inline-flex items-center gap-x-1.5 rounded-md bg-indigo-600 px-3 py-2  text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        onClick={handleExportUsersData}
+      >
+        <FaTable aria-hidden="true" className="-ml-0.5 h-4 w-4" />
+        Export Users
+      </button>
         </div>
       </div>
       <div className="mt-8 flow-root">

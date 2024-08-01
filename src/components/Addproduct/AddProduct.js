@@ -18,13 +18,20 @@ const categories = [
   // Add more categories as needed
 ];
 
+const sizeType = [
+  { id: 1, name: 'Alphabetical' },
+  { id: 2, name: 'Numerical' },
+  { id: 3, name: 'Accessories' },
+  // Add more categories as needed
+];
+
 function AddProduct() {
   const [variants, setVariants] = useState([{ color: '', sizes: [], images: [] }]);
   const [productDetails, setProductDetails] = useState({
     name: '',
     description: '',
     category: '',
-    sizeType: 'alphabetical',
+    sizeType: '',
     gender: '',
   });
   const [productData, setProductData] = useState(null);
@@ -176,7 +183,7 @@ function AddProduct() {
               value={productDetails.sizeType}
               onChange={(e) => handleProductDetailsChange('sizeType', e.target.value)}
             >
-              
+              <option value="">Select Size Type</option>
               <option value="alphabetical">Alphabetical</option>
               <option value="numerical">Numerical</option>
             </select>
@@ -230,7 +237,7 @@ function AddProduct() {
                 </button>
               </div>
               {variant.sizes.map((size, sizeIndex) => (
-                <div key={sizeIndex} className="mb-4 border rounded-lg p-2 relative">
+                <div key={sizeIndex} className="mb-4 border rounded-lg p-2 relative mt-5">
                   <div className="mb-2 flex justify-between items-center">
                     <span className="block text-sm font-medium text-gray-700">Size: {size.size}</span>
                     <button
@@ -244,43 +251,54 @@ function AddProduct() {
                       &times;
                     </button>
                   </div>
-                  <div className="mb-2">
-                    <label className="block text-sm font-medium text-gray-700">Quantity</label>
-                    <input
-                      type="number"
-                      className="mt-1 p-2 w-full border rounded-md"
-                      value={size.quantity}
-                      onChange={(e) => handleVariantChange(variantIndex, sizeIndex, 'quantity', e.target.value)}
-                      min="1"
-                    />
-                  </div>
-                  <div className="mb-2">
-                    <label className="block text-sm font-medium text-gray-700">Price</label>
-                    <input
-                      type="number"
-                      className="mt-1 p-2 w-full border rounded-md"
-                      value={size.price}
-                      onChange={(e) => handleVariantChange(variantIndex, sizeIndex, 'price', e.target.value)}
-                    />
-                  </div>
-                  <div className="mb-2">
-                    <label className="block text-sm font-medium text-gray-700">Discount</label>
-                    <input
-                      type="number"
-                      className="mt-1 p-2 w-full border rounded-md"
-                      value={size.discount}
-                      onChange={(e) => handleVariantChange(variantIndex, sizeIndex, 'discount', e.target.value)}
-                    />
-                  </div>
-                  <div className="mb-2">
-                    <label className="block text-sm font-medium text-gray-700">Final Price</label>
-                    <input
-                      type="number"
-                      className="mt-1 p-2 w-full border rounded-md"
-                      value={size.finalPrice}
-                      onChange={(e) => handleVariantChange(variantIndex, sizeIndex, 'finalPrice', e.target.value)}
-                    />
-                  </div>
+                  <div className="flex mb-2 space-x-2">
+  <div className="flex flex-col">
+    <label className="block text-sm font-medium text-gray-700">Quantity</label>
+    <input
+      type="number"
+      className="p-2 border rounded-md w-20 text-sm"
+      value={size.quantity}
+      onChange={(e) => handleVariantChange(variantIndex, sizeIndex, 'quantity', e.target.value)}
+      min="1"
+    />
+  </div>
+
+  <div className="flex flex-col">
+    <label className="block text-sm font-medium text-gray-700">Price</label>
+    <input
+      type="number"
+      className="p-2 border rounded-md w-20 text-sm"
+      value={size.price}
+      onChange={(e) => handleVariantChange(variantIndex, sizeIndex, 'price', e.target.value)}
+    />
+  </div>
+
+  <div className="flex flex-col">
+    <label className="block text-sm font-medium text-gray-700">Discount</label>
+    <input
+      type="number"
+      className="p-2 border rounded-md w-20 text-sm"
+      value={size.discount}
+      onChange={(e) => handleVariantChange(variantIndex, sizeIndex, 'discount', e.target.value)}
+    />
+  </div>
+
+  <div className="flex flex-col">
+    <label className="block text-sm font-medium text-gray-700">Final Price</label>
+    <input
+      type="number"
+      className="p-2 border rounded-md w-20 text-sm"
+      value={size.finalPrice}
+      onChange={(e) => handleVariantChange(variantIndex, sizeIndex, 'finalPrice', e.target.value)}
+    />
+  </div>
+</div>
+
+
+
+
+
+
                 </div>
               ))}
               <div className="mb-2">

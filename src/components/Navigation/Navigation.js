@@ -1061,6 +1061,8 @@ import {
   HomeIcon,
   UsersIcon,
   XMarkIcon,
+  
+  ClipboardDocumentListIcon 
 } from '@heroicons/react/24/outline';
 import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid';
 import logo from '../../assests/Images/logo.jpg';
@@ -1068,8 +1070,9 @@ import { useNavigate, useLocation } from 'react-router-dom'; // Import useNaviga
 
 const navigation = [
   { name: 'Dashboard', href: '/dashboard', icon: HomeIcon },
-  { name: 'Add Products', href: '/products', icon: FolderIcon },
-  { name: 'User', href: '/user', icon: UsersIcon },
+  { name: 'Orders', href: '/orders', icon: ClipboardDocumentListIcon },
+  // { name: 'Add Products', href: '/products', icon: FolderIcon },
+  { name: 'Users', href: '/user', icon: UsersIcon },
   { name: 'Products', href: '/product', icon: FolderIcon },
 ];
 

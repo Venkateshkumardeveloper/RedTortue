@@ -17,7 +17,7 @@
 //     const handleThumbnailClick = (imageSrc) => {
 //       setMainImage(imageSrc);
 //     }
-   
+
 //   return (
 //     <div className="container mx-auto ">
 //       {/* Navigation */}
@@ -110,12 +110,12 @@
 //     <div className="flex flex-col items-center">
 //     <img src={Cash} alt="Free Shipping" className="w-16 h-16 rounded-full mb-2" />
 //     <span>Cash on Delivery</span></div>
-              
-     
+
+
 //         </div>
 //       </div>
 //         </div>
-        
+
 //       </div>
 
 
@@ -129,11 +129,11 @@
 //     <div className="pt-4 flex flex-col items-center h-40 w-48 border rounded-md">
 //     <img src={Packed} alt="Packed " className="w-16 h-16   border-2 border-gray-300 shadow-lg  rounded-full mb-2" />
 //     <span>Packed With safety</span></div>
-              
-     
+
+
 //         </div>
 
-  
+
 
 //       {/* Similar Products */}
 //       <div className="mt-8 px-4">
@@ -410,7 +410,7 @@
 //           <p className="mt-2 text-sm text-gray-700">
 //             A list of all the products including their name, price, discount, size, stock, and image.
 //           </p>
-          
+
 //         </div>
 //         <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
 
@@ -487,7 +487,7 @@
 //                     <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
 //                       <img src={product.image} alt={product.name} className="h-10 w-10 rounded-md" />
 //                     </td>
-                    
+
 //                   </tr>
 //                 ))}
 //               </tbody>
@@ -535,7 +535,7 @@
 //     // Handle the delete functionality here
 //     console.log(`Deleting product: ${product.name}`);
 //   };
-  
+
 //   function productadd(){
 //     navigate("/products")
 //   }
@@ -644,7 +644,8 @@ import Shirt6 from "../../assests/Images/polo.png";
 import jeans from "../../assests/Images/jeans.png";
 import sweatshirt from '../../assests/Images/Sweatshirt.png';
 import { useNavigate } from 'react-router-dom';
-import { FaEdit, FaTrash } from 'react-icons/fa';
+import { FaPen, FaTrash,FaTable ,FaPlus } from 'react-icons/fa';
+import * as XLSX from 'xlsx';
 
 const products = [
   { name: 'T-Shirt', price: '₹1000', discount: '10%', size: 'M', stock: 50, image: shirtImage },
@@ -671,26 +672,48 @@ export default function ProductPage() {
   const productadd = () => {
     navigate("/products");
   };
+  const handleExportUsersData =  () => {
+    exportToExcel(products, 'Products');
+  };
+  const exportToExcel = (data, fileName) => {
+    const worksheet = XLSX.utils.json_to_sheet(data);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet1');
+    XLSX.writeFile(workbook, `${fileName}.xlsx`);
+  };
 
   return (
     <div className="px-4 sm:px-6 lg:px-8 pt-4 ml-10 lg:ml-72 w-auto">
-      <div className="sm:flex sm:items-center">
-        <div className="sm:flex-auto">
-          <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-custom-heading">Products</h2>
-          <p className="mt-2 text-sm text-gray-700">
-            A list of all the products including their name, price, discount, size, stock, and image.
-          </p>
-        </div>
-        <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
-          <button
-            type="button"
-            className="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            onClick={productadd}
-          >
-            Add Products
-          </button>
-        </div>
+       <div className="sm:flex sm:items-center">
+      <div className="sm:flex-auto">
+        <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-custom-heading">Products</h2>
+        <p className="mt-2 text-sm text-gray-700">
+          A list of all the products including their name, price, discount, size, stock, and image.
+        </p>
       </div>
+      <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
+  <button
+    type="button"
+    className="inline-flex items-center gap-x-1.5 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+    onClick={handleExportUsersData}
+  >
+    <FaTable aria-hidden="true" className="-ml-0.5 h-4 w-4" />
+    Export Products
+  </button>
+</div>
+<div className="mt-2 sm:ml-16 sm:mt-0 sm:flex-none"> {/* Reduced margin-top from mt-4 to mt-2 */}
+  <button
+    type="button"
+    className="inline-flex items-center gap-x-1.5 rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+    onClick={productadd}
+  >
+    <FaPlus aria-hidden="true" className="-ml-0.5 h-4 w-4" />
+    Add Product
+  </button>
+</div>
+
+      
+    </div>
       <div className="mt-8 flow-root">
         <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
@@ -741,16 +764,21 @@ export default function ProductPage() {
                     <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                       <img src={product.image} alt={product.name} className="h-10 w-10 rounded-md" />
                     </td>
-                    <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500 flex items-center space-x-4">
-                      <FaEdit
+                    <td className="whitespace-nowrap px-3 py-4 text-lg text-gray-500 flex items-center space-x-4">
+                      <div className='bg-blue-500 p-2 rounded' >
+                      <FaPen
                         onClick={() => handleEdit(product)}
-                        className="text-indigo-600 hover:text-indigo-800 cursor-pointer"
+                        className="text-white hover:text-blue-800 cursor-pointer"
                       />
+                      </div>
+                      <div className='bg-red-500 p-2 rounded' >
                       <FaTrash
                         onClick={() => handleDelete(product)}
-                        className="text-red-600 hover:text-red-800 cursor-pointer"
+                        className="text-white hover:text-red-800 cursor-pointer"
                       />
+                      </div>
                     </td>
+
                   </tr>
                 ))}
               </tbody>
