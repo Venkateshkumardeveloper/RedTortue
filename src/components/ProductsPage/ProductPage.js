@@ -634,6 +634,163 @@
 // }
 
 
+// import React from 'react';
+// import shirtImage from "../../assests/Images/Tshrit2.jpg";
+// import Shirt2 from "../../assests/Images/Tshrit3.png";
+// import Shirt3 from "../../assests/Images/similar product.jpg";
+// import Shirt4 from "../../assests/Images/denimjacket.png";
+// import Shirt5 from "../../assests/Images/Hoodie.png";
+// import Shirt6 from "../../assests/Images/polo.png";
+// import jeans from "../../assests/Images/jeans.png";
+// import sweatshirt from '../../assests/Images/Sweatshirt.png';
+// import { useNavigate } from 'react-router-dom';
+// import { FaPen, FaTrash,FaTable ,FaPlus } from 'react-icons/fa';
+// import * as XLSX from 'xlsx';
+
+// const products = [
+//   { name: 'T-Shirt', price: '₹1000', discount: '10%', size: 'M', stock: 50, image: shirtImage },
+//   { name: 'Casual Shirt', price: '₹1200', discount: '15%', size: 'L', stock: 30, image: Shirt2 },
+//   { name: 'Formal Shirt', price: '₹1500', discount: '20%', size: 'S', stock: 20, image: Shirt3 },
+//   { name: 'Denim Jacket', price: '₹2500', discount: '25%', size: 'XL', stock: 10, image: Shirt4 },
+//   { name: 'Hoodie', price: '₹2000', discount: '30%', size: 'M', stock: 5, image: Shirt5 },
+//   { name: 'Polo Shirt', price: '₹800', discount: '35%', size: 'L', stock: 15, image: Shirt6 },
+//   { name: 'Jeans', price: '₹1800', discount: '40%', size: 'S', stock: 25, image: jeans },
+//   { name: 'Sweatshirt', price: '₹1500', discount: '45%', size: 'XL', stock: 35, image: sweatshirt },
+// ];
+
+// export default function ProductPage() {
+//   const navigate = useNavigate();
+
+//   const handleEdit = (product) => {
+//     navigate('/add-product', { state: { product } });
+//   };
+
+//   const handleDelete = (product) => {
+//     console.log(`Deleting product: ${product.name}`);
+//   };
+
+//   const productadd = () => {
+//     navigate("/products");
+//   };
+//   const handleExportUsersData =  () => {
+//     exportToExcel(products, 'Products');
+//   };
+//   const exportToExcel = (data, fileName) => {
+//     const worksheet = XLSX.utils.json_to_sheet(data);
+//     const workbook = XLSX.utils.book_new();
+//     XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet1');
+//     XLSX.writeFile(workbook, `${fileName}.xlsx`);
+//   };
+
+//   return (
+//     <div className="px-4 sm:px-6 lg:px-8 pt-4 ml-10 lg:ml-72 w-auto">
+//        <div className="sm:flex sm:items-center">
+//       <div className="sm:flex-auto">
+//         <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-custom-heading">Products</h2>
+//         <p className="mt-2 text-sm text-gray-700">
+//           A list of all the products including their name, price, discount, size, stock, and image.
+//         </p>
+//       </div>
+//       <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
+//   <button
+//     type="button"
+//     className="inline-flex items-center gap-x-1.5 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+//     onClick={handleExportUsersData}
+//   >
+//     <FaTable aria-hidden="true" className="-ml-0.5 h-4 w-4" />
+//     Export Products
+//   </button>
+// </div>
+// <div className="mt-2 sm:ml-16 sm:mt-0 sm:flex-none"> {/* Reduced margin-top from mt-4 to mt-2 */}
+//   <button
+//     type="button"
+//     className="inline-flex items-center gap-x-1.5 rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+//     onClick={productadd}
+//   >
+//     <FaPlus aria-hidden="true" className="-ml-0.5 h-4 w-4" />
+//     Add Product
+//   </button>
+// </div>
+
+      
+//     </div>
+//       <div className="mt-8 flow-root">
+//         <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+//           <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+//             <table className="min-w-full divide-y divide-gray-300">
+//               <thead>
+//                 <tr>
+//                   <th scope="col" className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">
+//                     Product Name
+//                   </th>
+//                   <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+//                     Price
+//                   </th>
+//                   <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+//                     Discount
+//                   </th>
+//                   <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+//                     Size
+//                   </th>
+//                   <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+//                     Stock
+//                   </th>
+//                   <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+//                     Image
+//                   </th>
+//                   <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+//                     Actions
+//                   </th>
+//                 </tr>
+//               </thead>
+//               <tbody className="divide-y divide-gray-200">
+//                 {products.map((product) => (
+//                   <tr key={product.name}>
+//                     <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">
+//                       {product.name}
+//                     </td>
+//                     <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+//                       {product.price}
+//                     </td>
+//                     <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+//                       {product.discount}
+//                     </td>
+//                     <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+//                       {product.size}
+//                     </td>
+//                     <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+//                       {product.stock}
+//                     </td>
+//                     <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+//                       <img src={product.image} alt={product.name} className="h-10 w-10 rounded-md" />
+//                     </td>
+//                     <td className="whitespace-nowrap px-3 py-4 text-lg text-gray-500 flex items-center space-x-4">
+//                       <div className='bg-blue-500 p-2 rounded' >
+//                       <FaPen
+//                         onClick={() => handleEdit(product)}
+//                         className="text-white hover:text-blue-800 cursor-pointer"
+//                       />
+//                       </div>
+//                       <div className='bg-red-500 p-2 rounded' >
+//                       <FaTrash
+//                         onClick={() => handleDelete(product)}
+//                         className="text-white hover:text-red-800 cursor-pointer"
+//                       />
+//                       </div>
+//                     </td>
+
+//                   </tr>
+//                 ))}
+//               </tbody>
+//             </table>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+
 import React from 'react';
 import shirtImage from "../../assests/Images/Tshrit2.jpg";
 import Shirt2 from "../../assests/Images/Tshrit3.png";
@@ -644,7 +801,7 @@ import Shirt6 from "../../assests/Images/polo.png";
 import jeans from "../../assests/Images/jeans.png";
 import sweatshirt from '../../assests/Images/Sweatshirt.png';
 import { useNavigate } from 'react-router-dom';
-import { FaPen, FaTrash,FaTable ,FaPlus } from 'react-icons/fa';
+import { FaPen, FaTrash, FaTable, FaPlus } from 'react-icons/fa';
 import * as XLSX from 'xlsx';
 
 const products = [
@@ -672,9 +829,11 @@ export default function ProductPage() {
   const productadd = () => {
     navigate("/products");
   };
-  const handleExportUsersData =  () => {
+
+  const handleExportUsersData = () => {
     exportToExcel(products, 'Products');
   };
+
   const exportToExcel = (data, fileName) => {
     const worksheet = XLSX.utils.json_to_sheet(data);
     const workbook = XLSX.utils.book_new();
@@ -684,36 +843,34 @@ export default function ProductPage() {
 
   return (
     <div className="px-4 sm:px-6 lg:px-8 pt-4 ml-10 lg:ml-72 w-auto">
-       <div className="sm:flex sm:items-center">
-      <div className="sm:flex-auto">
-        <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-custom-heading">Products</h2>
-        <p className="mt-2 text-sm text-gray-700">
-          A list of all the products including their name, price, discount, size, stock, and image.
-        </p>
+      <div className="sm:flex sm:items-center">
+        <div className="sm:flex-auto">
+          <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-custom-heading">Products</h2>
+          <p className="mt-2 text-sm text-gray-700">
+            A list of all the products including their name, price, discount, size, stock, and image.
+          </p>
+        </div>
+        <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
+          <button
+            type="button"
+            className="inline-flex items-center gap-x-1.5 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            onClick={handleExportUsersData}
+          >
+            <FaTable aria-hidden="true" className="-ml-0.5 h-4 w-4" />
+            Export Products
+          </button>
+        </div>
+        <div className="mt-2 sm:ml-16 sm:mt-0 sm:flex-none">
+          <button
+            type="button"
+            className="inline-flex items-center gap-x-1.5 rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            onClick={productadd}
+          >
+            <FaPlus aria-hidden="true" className="-ml-0.5 h-4 w-4" />
+            Add Product
+          </button>
+        </div>
       </div>
-      <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
-  <button
-    type="button"
-    className="inline-flex items-center gap-x-1.5 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-    onClick={handleExportUsersData}
-  >
-    <FaTable aria-hidden="true" className="-ml-0.5 h-4 w-4" />
-    Export Products
-  </button>
-</div>
-<div className="mt-2 sm:ml-16 sm:mt-0 sm:flex-none"> {/* Reduced margin-top from mt-4 to mt-2 */}
-  <button
-    type="button"
-    className="inline-flex items-center gap-x-1.5 rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-    onClick={productadd}
-  >
-    <FaPlus aria-hidden="true" className="-ml-0.5 h-4 w-4" />
-    Add Product
-  </button>
-</div>
-
-      
-    </div>
       <div className="mt-8 flow-root">
         <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
@@ -765,20 +922,19 @@ export default function ProductPage() {
                       <img src={product.image} alt={product.name} className="h-10 w-10 rounded-md" />
                     </td>
                     <td className="whitespace-nowrap px-3 py-4 text-lg text-gray-500 flex items-center space-x-4">
-                      <div className='bg-blue-500 p-2 rounded' >
-                      <FaPen
-                        onClick={() => handleEdit(product)}
-                        className="text-white hover:text-blue-800 cursor-pointer"
-                      />
+                      <div className='bg-blue-500 p-2 rounded'>
+                        <FaPen
+                          onClick={() => handleEdit(product)}
+                          className="text-white hover:text-blue-800 cursor-pointer"
+                        />
                       </div>
-                      <div className='bg-red-500 p-2 rounded' >
-                      <FaTrash
-                        onClick={() => handleDelete(product)}
-                        className="text-white hover:text-red-800 cursor-pointer"
-                      />
+                      <div className='bg-red-500 p-2 rounded'>
+                        <FaTrash
+                          onClick={() => handleDelete(product)}
+                          className="text-white hover:text-red-800 cursor-pointer"
+                        />
                       </div>
                     </td>
-
                   </tr>
                 ))}
               </tbody>
